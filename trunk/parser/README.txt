@@ -32,5 +32,7 @@ TODO :
 
 ### Liste des contributeurs
 M. Tixier (matthieu.tixier@utt.fr)
+G. Avargues (guillaume.avargues@utt.fr)
+T. Schaal (thomas.schaal@utt.fr)
 
 
