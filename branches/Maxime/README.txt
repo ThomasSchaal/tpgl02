@@ -1,7 +1,7 @@
 ### README - Verbose POI Format (VPF) Parser - Exercice TP GL02
 
-Description : Fournit un petit parser (descente récursive) en javascript permettant de vérifier la conformité au format non standard VPF.
-Ce format permet de décrire des listes de points d'intérêt et de conserver une liste de notes associées à ceux-ci.
+Description : Fournit un petit parser (descente rÃ©cursive) en javascript permettant de vÃ©rifier la conformitÃ© au format non standard VPF.
+Ce format permet de dÃ©crire des listes de points d'intÃ©rÃªt et de conserver une liste de notes associÃ©es Ã  ceux-ci.
 Les fichiers sont au format texte et respectent la grammaire suivante.
 
 <liste_poi> ::= (<poi>)* "$$"
@@ -20,17 +20,18 @@ $ node vpfParser.js <finchier.vpf>
 
 ### Version : 0.01
 
-- Parse entièrement les fichiers simples du jeu de test (mais termine avec une erreur)
+- Parse entiÃ¨rement les fichiers simples du jeu de test (mais termine avec une erreur)
 - Prise en compte des noms de POIs'ils ne comportent pas d'espaces
 
 TODO :
 
-- Prise en charge des notes conformément au format
-- Construction d'une liste d'objet POI afin de permettre des traitement ultérieur
+- Prise en charge des notes conformÃ©ment au format
+- Construction d'une liste d'objet POI afin de permettre des traitement ultÃ©rieur
 - Ajout d'une option pour afficher chaque POI avec sa note moyenne
 
 
 ### Liste des contributeurs
+M. Reut (maxime.reut@gmail.com)
 M. Tixier (matthieu.tixier@utt.fr)
 G. Avargues (guillaume.avargues@utt.fr)
 T. Schaal (thomas.schaal@utt.fr)
