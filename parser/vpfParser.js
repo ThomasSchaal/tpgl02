@@ -26,7 +26,7 @@ function err(){
 function next(){
 	var curS = input.shift();
 	console.log(curS);
-	return curS
+	return curS;
 }
 
 function accept(){
@@ -37,8 +37,8 @@ function accept(){
 }
 
 function expect(s){
-	if(s == next()){
-		console.log("Reckognized! "+s)
+	if(s === next()){
+		console.log("Reckognized! "+s);
 		return true;
 	}else{
 		err();
@@ -82,7 +82,7 @@ function body(){
 }
 
 function name(){
-	expect("name:")
+	expect("name:");
 	var curS = next();
 	if(curS.match(/[\w\s]+/i)){
 		return true;
@@ -92,7 +92,7 @@ function name(){
 }
 
 function latlng(){
-	expect("latlng:")
+	expect("latlng:");
 	var curS = next();
 	if(curS.match(/-?\d+(\.\d+)?;-?\d+(\.\d+)?/)){
 		return true;
