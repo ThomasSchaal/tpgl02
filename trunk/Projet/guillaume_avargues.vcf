@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Avargues;Guillaume
+FN:Guillaume Avargues
+ORG:UTT
+TITLE:Shrimp Man
+TEL;TYPE=WORK,VOICE:+336 06 06 17 25
+ADR;TYPE=WORK:;;100 Waters Edge;Baytown;LA;30314;United States of America
+LABEL;TYPE=WORK:100 Waters Edge\nBaytown, LA 30314\nUnited States of America
+ADR;TYPE=HOME:;;42 Plantation St.;Baytown;LA;30314;United States of America
+LABEL;TYPE=HOME:42 Plantation St.\nBaytown, LA 30314\nUnited States of America
+EMAIL;TYPE=PREF,INTERNET:forrestgump@example.com
+END:VCARD
