@@ -22,7 +22,7 @@ function menu() {
     console.log("3: Exporter les contacts dans un format adequat aux logiciels de bureautiques");
     console.log("4: Archiver une fiche contact");
     console.log("5: Transferer une fiche archivee");
-    console.log("6:  Rechercher et afficher un contact");
+    console.log("6: Rechercher et afficher un contact");
     console.log("7: Afficher de statistiques generales\n");
     ask("choisissez votre fonction", /^[0-9]+$/, function(line) {
         switch (line.trim()) { //Switch permettant de choisir la fonction voulue.
@@ -445,7 +445,7 @@ function creerContact() {// Fonction qui permet de creer un contact. Une partie 
                         ask("choisissez votre mobile", /^[0-9\ ]+$/, function(mobile) {
                             ask("choisissez votre fixe", /^[0-9\ ]+$/, function(fixe) {
                                 ask("choisissez votre email", /^(.+)@/, function(email) { // on met toutes les caracteristiques dans une variable personne
-                                    personne = (nom + ";" + prenom + ";" + org + ";" + fonction + ";" + adresse + ";" + mobile + ";" + fixe + ";" + email + "\n");
+                                    personne = (nom + ";" + prenom + ";" + org + ";" + fonction + ";" + adresse + ";" + mobile + ";" + fixe + ";" + email);
                                     var compteur = 0;
                                     fs.readFile('contacts.csv', function(err, data) { // On lit le CSV pour ensuite mettre toutes les valeurs du fichier dans un tableau a deux dimensions
                                         if (err)
@@ -700,15 +700,15 @@ function transfertFicheArchivee(nom, prenom) {
                 var cp;
 
                 for (h = 0; h < adresse.length; h++) { //Recuperation des differents champs de l'adresse.
-                    if (h < adresse.length - 3) {
+                    if (h < adresse.length - 2) {
 
                         rue += adresse[h]+" ";
                     }
-                    else if (h === adresse.length - 3) {
-                        ville = adresse[h];
+                    else if (h === adresse.length - 2) {
+                        cp = adresse[h];
                     }
                     else if (h === adresse.length - 1) {
-                        cp = adresse[h];
+                        ville = adresse[h];
                     }
                 }
                rue=rue.trim();
