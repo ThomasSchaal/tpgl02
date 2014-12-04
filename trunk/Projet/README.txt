@@ -1,35 +1,35 @@
-Projet GL02 ; Librairie de conversion d’un vCard en CSV 
+Projet GL02 ; Librairie de conversion dÂ’un vCard en CSV 
 
-### Conseil pour le démarrage de l'application : 
-Prérequis : 
-Avoir installé Node.js sur la machine cliente(version V0.10.33). 
+### Conseil pour le dÃ©marrage de l'application : 
+PrÃ©requis : 
+Avoir installÃ© Node.js sur la machine cliente(version V0.10.33). 
 Connaitre le chemin vers le dossier contenant la librairie.
 
 
 ### Utilisation : 
 1. Ouvrir un invite de commande et se placer dans le dossier contenant 
-	la librairie en utilisant la fonction ‘cd’. Exemple H:/ISI1/GL02/Projet 
-2. Taper la commande ‘node “nom_du_script.js”’. 
+	la librairie en utilisant la fonction Â‘cdÂ’. Exemple H:/ISI1/GL02/Projet 
+2. Taper la commande Â‘node Â“nom_du_script.jsÂ”Â’. 
 	Normalement le menu de l'application s'affiche, si ce n'est pas le cas reprenez au point 1.
-Le menu est donc affiché, choisissez la fonction que vous voulez utiliser. 
+Le menu est donc affichÃ©, choisissez la fonction que vous voulez utiliser. 
 
 ### Remarques : 
-L'application est sensible à la casse. 
-Le nom d'un contact est entièrement en majuscule (NOM) et le prénom a juste sa première lettre en majuscule (Prenom). 
-Quand un chemin est demandé il faut l’entrer de cette manière : H:/ISI1/GL02/Projet
+L'application est sensible Ã  la casse. 
+Le nom d'un contact est entiÃ¨rement en majuscule (NOM) et le prÃ©nom a juste sa premiÃ¨re lettre en majuscule (Prenom). 
+Quand un chemin est demandÃ© il faut lÂ’entrer de cette maniÃ¨re : H:/ISI1/GL02/Projet
 
 
 
 
-### Ecarts par rapport au cahier des charges donné : 
+### Ecarts par rapport au cahier des charges donnÃ© : 
 
-- Il n'y a pas de base de données de contact dans l'application, l'ensemble des contacts gérés par la librairie est 
+- Il n'y a pas de base de donnÃ©es de contact dans l'application, l'ensemble des contacts gÃ©rÃ©s par la librairie est 
 	sous la forme d'un fichier CSV. L'application lit le fichier CSV et ajoute, supprime ou modifie un contact.
 	
-- Le format d'un fichier vCard a été modifié pour conformer à la norme vCard. Le format Backus-Naur spécifié était 
-	trop général pour être exploité.
+- Le format d'un fichier vCard a Ã©tÃ© modifiÃ© pour conformer Ã  la norme vCard. Le format Backus-Naur spÃ©cifiÃ© Ã©tait 
+	trop gÃ©nÃ©ral pour Ãªtre exploitÃ©.
 
-Exemple d'un fichier vCard utilisé dans l'application. 
+Exemple d'un fichier vCard utilisÃ© dans l'application. 
 BEGIN:VCARD
 VERSION:3.0
 FN:maxime reut
@@ -39,24 +39,25 @@ TEL;TYPE=WORK:0602020202
 TEL;TYPE=HOME:0452542120
 ADR;TYPE=HOME:;;26 chemin de chautard;Troyes;;10000;
 ORG:UTT
-TITLE:Informatique et systèmes d'information
+TITLE:Informatique et systÃ¨mes d'information
 END:VCARD
 
-- Le format d'un fichier CSV a été modifié pour conformer à la norme CSV. Le format Backus-Naur spécifié était le
-	même que pour le fichier vCard, il y avait donc des incompatibilités. 
+- Le format d'un fichier CSV a Ã©tÃ© modifiÃ© pour conformer Ã  la norme CSV. Le format Backus-Naur spÃ©cifiÃ© Ã©tait le
+	mÃªme que pour le fichier vCard, il y avait donc des incompatibilitÃ©s. 
 
-Exemple d'un fichier CSV correspondant à la norme
+Exemple d'un fichier CSV correspondant Ã  la norme
 nom;prenom;organisation;fonction;adresse;mobile;fix;email
-BERNARD;Nathan;UTT;Enseignant;10001 Troyes;06 01 01 01 01;04 93 01 01 02;bernard.nathan@utt.fr
-PETIT;Mathis;UTT;Enseignant;10003 Troyes;06 01 01 01 03;04 93 01 01 04;petit.mathis@utt.fr
-ROBERT;Louise;UTT;Enseignant;10004 Troyes;06 01 01 01 04;04 93 01 01 05;robert.louise@utt.fr 
+BERNARD;Nathan;UTT;Enseignant;26 chemin de chautard 10001 Troyes;06 01 01 01 01;04 93 01 01 02;bernard.nathan@utt.fr
+PETIT;Mathis;UTT;Enseignant;103 chemin du val fleuri 10003 Troyes;06 01 01 01 03;04 93 01 01 04;petit.mathis@utt.fr
+ROBERT;Louise;UTT;Enseignant;205 avenue anatole france 10004 Troyes;06 01 01 01 04;04 93 01 01 05;robert.louise@utt.fr 
 
-- La SPEC_7 Recherche d'un contact et la SPEC_8 Affichage d'un contact ont fusionnées. 
-	L'application demande d'entrer un nom et un prenom de contact et l'affiche dans la même fonction. 
 
-- La SPEC_10 Affichage de statistiques générales ne retourne pas le nombre moyen de relations ajoutées par 
-	un commercial, nous n'avons pas trouvé cela judicieux de demander un login pour accéder
-	à l'application.  
+- La SPEC_7 Recherche d'un contact et la SPEC_8 Affichage d'un contact ont fusionnÃ©es. 
+	L'application demande d'entrer un nom et un prenom de contact et l'affiche dans la mÃªme fonction. 
+
+- La SPEC_10 Affichage de statistiques gÃ©nÃ©rales ne retourne pas le nombre moyen de relations ajoutÃ©es par 
+	un commercial, nous n'avons pas trouvÃ© cela judicieux de demander un login pour accÃ©der
+	Ã  l'application.  
 
 ### Version : 1.0
 	
