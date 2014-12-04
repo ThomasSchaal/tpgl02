@@ -1,3 +1,0 @@
-function lireVCardThomas(){
-	lireVCardThomas;
-}
