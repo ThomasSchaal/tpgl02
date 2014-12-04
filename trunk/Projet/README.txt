@@ -1,19 +1,19 @@
 Projet GL02 ; Librairie de conversion d’un vCard en CSV 
 
-Conseil pour le démarrage de l'application : 
+### Conseil pour le démarrage de l'application : 
 Prérequis : 
-Avoir installer Node.js sur la machine cliente. 
+Avoir installé Node.js sur la machine cliente. 
 Connaitre le chemin vers le dossier contenant la librairie.
 
 
-Utilisation : 
-- Ouvrir un invite de commande et se placer dans le dossier contenant 
+### Utilisation : 
+1. Ouvrir un invite de commande et se placer dans le dossier contenant 
 	la librairie en utilisant la fonction ‘cd’. Exemple H:/ISI1/GL02/Projet 
-- Taper la commande ‘node “nom_du_script.js”’. 
-	Normalement le menu de l'application s'affiche, si ce n'est pas le cas reprenez au point 1
+2. Taper la commande ‘node “nom_du_script.js”’. 
+	Normalement le menu de l'application s'affiche, si ce n'est pas le cas reprenez au point 1.
 Le menu est donc affiché, choisissez la fonction que vous voulez utiliser. 
 
-Remarques : 
+### Remarques : 
 L'application est sensible à la casse. 
 Le nom d'un contact est entièrement en majuscule (NOM) et le prénom a juste sa première lettre en majuscule (Prenom). 
 Quand un chemin est demandé il faut l’entrer de cette manière : H:/ISI1/GL02/Projet
@@ -21,7 +21,7 @@ Quand un chemin est demandé il faut l’entrer de cette manière : H:/ISI1/GL02/Pro
 
 
 
-Ecarts par rapport au cahier des charges donné : 
+### Ecarts par rapport au cahier des charges donné : 
 
 - Il n'y a pas de base de données de contact dans l'application, l'ensemble des contacts gérés par la librairie est 
 	sous la forme d'un fichier CSV. L'application lit le fichier CSV et ajoute, supprime ou modifie un contact.
@@ -58,5 +58,12 @@ ROBERT;Louise;UTT;Enseignant;10004 Troyes;06 01 01 01 04;04 93 01 01 05;robert.l
 	un commercial, nous n'avons pas trouvé cela judicieux de demander un login pour accéder
 	à l'application.  
 
-
+### Version : 1.0
+	
+### Liste des contributeurs
+M. Tixier (matthieu.tixier@utt.fr)
+G. Avargues (guillaume.avargues@utt.fr)
+T. Schaal (thomas.schaal@utt.fr)
+M. Reut (maxime.reut@utt.fr)
+W. Sun (wenhao.sun@utt.fr)
 
