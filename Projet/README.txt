@@ -1,17 +1,22 @@
 Projet GL02 ; Librairie de conversion d’un vCard en CSV 
 
-Conseil d’utilisation : 
+Conseil pour le démarrage de l'application : 
 Prérequis : 
-Avoir installer Node.js sur la machine cliente. 
-Connaitre le chemin vers le dossier contenant la librairie
+- Avoir installer Node.js sur la machine cliente. 
+- Si il n'est pas fournit, il faut créer un fichier "contacts.csv" qui comprend 
+	en première ligne "nom;prenom;organisation;fonction;adresse;mobile;fix;email"
+- Connaitre le chemin vers le dossier contenant la librairie.
+
 
 Utilisation : 
-Ouvrir un invite de commande et se placer dans le dossier contenant la librairie en utilisant la fonction ‘cd’. Exemple H:/ISI1/GL02/Projet 
-Taper la commande ‘node “nom_du_script.js”’. Normalement le menu de l’application s’affiche, si ce n’est pas le cas reprenez au point 1
-Le menu est donc affiché, choisissez la fonction que vous voulez utiliser. 
+- Ouvrir un invite de commande et se placer dans le dossier contenant 
+	la librairie en utilisant la fonction ‘cd’. Exemple H:/ISI1/GL02/Projet 
+- Taper la commande ‘node “nom_du_script.js”’. 
+	Normalement le menu de l'application s'affiche, si ce n'est pas le cas reprenez au point 1
+- Le menu est donc affiché, choisissez la fonction que vous voulez utiliser. 
 
-N.B. : 
-L’application est sensible à la casse. 
+Remarques : 
+L'application est sensible à la casse. 
 Le nom d'un contact est entièrement en majuscule (NOM) et le prénom a juste sa première lettre en majuscule (Prenom). 
 Quand un chemin est demandé il faut l’entrer de cette manière : H:/ISI1/GL02/Projet
 
@@ -39,7 +44,6 @@ ORG:UTT
 TITLE:Informatique et systèmes d'information
 END:VCARD
 
-
 - Le format d'un fichier CSV a été modifié pour conformer à la norme CSV. Le format Backus-Naur spécifié était le
 	même que pour le fichier vCard, il y avait donc des incompatibilités. 
 
@@ -51,6 +55,10 @@ ROBERT;Louise;UTT;Enseignant;10004 Troyes;06 01 01 01 04;04 93 01 01 05;robert.l
 
 - La SPEC_7 Recherche d'un contact et la SPEC_8 Affichage d'un contact ont fusionnées. 
 	L'application demande d'entrer un nom et un prenom de contact et l'affiche dans la même fonction. 
+
+- La SPEC_10 Affichage de statistiques générales ne retourne pas le nombre moyen de relations ajoutées par 
+	un commercial, nous n'avons pas trouvé cela judicieux de demander un login pour accéder
+	à l'application.  
 
 
 
