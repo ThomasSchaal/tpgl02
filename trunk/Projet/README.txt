@@ -2,10 +2,8 @@ Projet GL02 ; Librairie de conversion d’un vCard en CSV
 
 Conseil pour le démarrage de l'application : 
 Prérequis : 
-- Avoir installer Node.js sur la machine cliente. 
-- Si il n'est pas fournit, il faut créer un fichier "contacts.csv" qui comprend 
-	en première ligne "nom;prenom;organisation;fonction;adresse;mobile;fix;email"
-- Connaitre le chemin vers le dossier contenant la librairie.
+Avoir installer Node.js sur la machine cliente. 
+Connaitre le chemin vers le dossier contenant la librairie.
 
 
 Utilisation : 
@@ -13,7 +11,7 @@ Utilisation :
 	la librairie en utilisant la fonction ‘cd’. Exemple H:/ISI1/GL02/Projet 
 - Taper la commande ‘node “nom_du_script.js”’. 
 	Normalement le menu de l'application s'affiche, si ce n'est pas le cas reprenez au point 1
-- Le menu est donc affiché, choisissez la fonction que vous voulez utiliser. 
+Le menu est donc affiché, choisissez la fonction que vous voulez utiliser. 
 
 Remarques : 
 L'application est sensible à la casse. 
