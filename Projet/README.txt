@@ -2,7 +2,7 @@ Projet GL02 ; Librairie de conversion d’un vCard en CSV
 
 ### Conseil pour le démarrage de l'application : 
 Prérequis : 
-Avoir installé Node.js sur la machine cliente. 
+Avoir installé Node.js sur la machine cliente(version V0.10.33). 
 Connaitre le chemin vers le dossier contenant la librairie.
 
 
