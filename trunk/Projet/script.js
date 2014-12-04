@@ -1,7 +1,7 @@
 var util = require("util");
 var fs = require("fs");
 
-// Creation d’un fichier contact.csv si il n’existe pas deja
+// Creation d?un fichier contact.csv si il n?existe pas deja
 fs.exists("contacts.csv", function(exists) {
                            
                            if (exists) {
@@ -54,8 +54,8 @@ function menu() {
                 });
                 break;
             case '3' : //Exporter les contacts dans un format adequat aux logiciels de bureautiques
-                ask("Choisisser le chemin du fichier csv :", /.*/, function(chemin) {
-                    fs.readFile('test.csv', function(err, data) {
+                ask("Choisisser le chemin du fichier csv ", /.*/, function(chemin) {
+                    fs.readFile('contacts.csv', function(err, data) {
                         fs.writeFile(chemin, data);
                         menu();
                     });
@@ -306,8 +306,12 @@ function modifierContact(nom, prenom) {
                                     ask("choisissez votre fixe", /^[0-9\ ]+$/, function(fixeModif) {
                                         ask("choisissez votre email", /^(.+)@/, function(emailModif) {
                                             personne = (nomModif + ";" + prenomModif + ";" + orgModif + ";" + fonctionModif + ";" + adresseModif + ";" + mobileModif + ";" + fixeModif + ";" + emailModif + "\n"); //On stocke une ligne au format "csv" dans personne.
-                                            fs.writeFile("contacts.csv", begin + personne + end); //On ecrit dans contacts.csv, la personne creee au bon endroit. 
-                                            console.log(personne + " a ete modifiee");
+                                            if (end===null){
+                                                fs.writeFile("contacts.csv", begin+personne);}
+                                             else{
+                                                   fs.writeFile("contacts.csv", begin + personne + end); //On ecrit dans contacts.csv, la personne creee au bon endroit.
+                                                  }
+                                            console.log(" Le client a ete modifiee");
                                             fs.exists("modification.txt", function(exists) { //Test de l'existence du fichier modification.tx
                                                 var date = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''); //Formatage de la date.
                                                 var modif = "modification de : " + tabUtilisateur[numPersonne][0] + ' ' + tabUtilisateur[numPersonne][1] + " le " + date + "\n";
@@ -572,7 +576,7 @@ function archiverContact(nom, prenom) {
                if (end===null){
            fs.writeFile("contacts.csv", begin);
         }else{
-             fs.writeFile("contacts.csv", begin + end); // On ecrit dans le CSV les clients sauf celui qui vient d'etre supprime
+             fs.writeFile("contacts.csv", begin + end); // On ecrit dans le CSV les clients 
         }
                 console.log("suppression reussie");
                 fs.exists("archive.csv", function(exists) { //Test de l'existence du fichier archive.csv
@@ -746,7 +750,7 @@ function transfertFicheArchivee(nom, prenom) {
                if (end===null){
            fs.writeFile("archive.csv", begin);
         }else{
-             fs.writeFile("archive.csv", begin + end); // On ecrit dans le CSV les clients sauf celui qui vient d'etre supprime
+             fs.writeFile("archive.csv", begin + end); // On ecrit dans le CSV les clients 
         }
                 console.log("suppression reussie");
 
@@ -795,13 +799,7 @@ function compterNombreLigne() { //Affichage des statistiques de l'application SP
 
             compteur++;
         }
-        console.log("Le fichier CSV contient " + compteur + " contact(s)."); // Affichage du nombre de lignes
+        console.log("Le fichier CSV contient " + compteur + " contact(s).\n"); // Affichage du nombre de lignes
         menu();
     });
 }
-
-
-
-
-
-
