@@ -1,4 +1,4 @@
-Librairie de conversion d’un vCard en CSV 
+Projet GL02 ; Librairie de conversion d’un vCard en CSV 
 
 Conseil d’utilisation : 
 Prérequis : 
