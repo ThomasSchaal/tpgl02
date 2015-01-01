@@ -5,3 +5,7 @@ modification de : ROBERT Louise le 2014-12-04 09:57:58
 REUT;Maxime;UTT;Informatique et systèmes d'information;26 chemin de chautard 10000 Troyes;0602020202;0452542120;maxime.reut@gmail.comimport de : AVARGUES Guillaume le 2014-12-04 10:02:45
 archivage de : ROBERT Louise le 2014-12-04 10:05:20
 archivage de : REUT Maxime le 2014-12-04 10:09:18
+import de : AVARGUES Guillaume le 2014-12-10 13:44:43
+import de : REUT Maxime le 2014-12-10 13:46:06
+suppression de : AVARGUES Guillaume le 2014-12-10 13:49:36
+archivage de : AVARGUES Guillaume le 2014-12-29 23:41:22
