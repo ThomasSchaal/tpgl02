@@ -1,6 +1,10 @@
 #summary One-sentence summary of this page.
 #labels Phase-Support,Deprecated
 
+=Sommaire=
+* Introduction
+* Test
+
 = Introduction =
 
 AMDY, société spécialisée dans l‟aide aux personnes âgées, n‟est pas satisfaite de son application de gestion des plannings. En effet, celle-ci est trop sommaire pour l‟utilisation qu‟ils en font. Par exemple, la non-gestion des conflits entre les différents intervenants entraîne de lourdes pertes de temps dues au fait qu‟ils aient à le faire manuellement. Par ailleurs, ils désirent aussi introduire le format iCalendar et bénéficier d‟un maximum d‟informations sur chaque rendez-vous.
