@@ -23,3 +23,6 @@ Connaitre le chemin vers le dossier contenant la librairie.
 Le menu est donc affiché, choisissez la fonction que vous voulez utiliser.
 
 = Organisation du projet =
+
+- L'ensemble du code source du projet (fichier.js) se trouve dans le dossier svn/trunk/Projet
+- Les tests et les données de tests se situent dans le chemin suivant : svn/trunk/test/recette
