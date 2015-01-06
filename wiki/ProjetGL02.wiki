@@ -11,12 +11,15 @@ Notre application comprendra donc une gestion des rendez-vous de chaque interven
 
 = Pré-requis =
 
-*Avoir installé Node.js sur la machine cliente(version V0.10.33). 
-*Connaitre le chemin vers le dossier contenant la librairie.
+Avoir installé Node.js sur la machine cliente(version V0.10.33). 
+Connaitre le chemin vers le dossier contenant la librairie.
 
-= Details =
+= Utilisation =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+1. Ouvrir un invite de commande et se placer dans le dossier contenant 
+	la librairie en utilisant la fonction cd. Exemple H:/ISI1/GL02/Projet 
+2. Taper la commande node nom_du_script.js. 
+	Normalement le menu de l'application s'affiche, si ce n'est pas le cas reprenez au point 1.
+Le menu est donc affiché, choisissez la fonction que vous voulez utiliser.
+
+= Organisation du projet =
