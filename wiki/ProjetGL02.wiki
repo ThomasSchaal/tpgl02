@@ -2,8 +2,8 @@
 #labels Phase-Support,Deprecated
 
 =Sommaire=
-* Introduction
-* Test
+*Introduction
+*Test
 
 = Introduction =
 
