@@ -1,9 +1,7 @@
 #summary One-sentence summary of this page.
-#labels Phase-Support,Deprecated
 
 =Sommaire=
-#Introduction
-*Test
+
 
 = Introduction =
 
@@ -11,7 +9,10 @@ AMDY, société spécialisée dans l‟aide aux personnes âgées, n‟est
 Notre rôle est de fournir une solution à la société AMDY qui refléterait leur demande et qui implémenterait ainsi toutes les fonctionnalités demandées tout en conservant le logiciel propriétaire. Il faut élaborer, définir, et développer toutes les réponses aux besoins de l‟entreprise. 
 Notre application comprendra donc une gestion des rendez-vous de chaque intervenant avec une fonction permettant de détecter les conflits et de les résoudre. Elle sera aussi capable de traiter les plannings aux formats iCalendar et CSV et de donner toutes les informations nécessaires aux intervenants pour mener à bien leurs interventions.
 
+= Pré-requis =
 
+*Avoir installé Node.js sur la machine cliente(version V0.10.33). 
+*Connaitre le chemin vers le dossier contenant la librairie.
 
 = Details =
 
