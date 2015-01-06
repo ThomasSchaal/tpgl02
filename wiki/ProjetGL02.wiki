@@ -14,10 +14,10 @@ Notre application comprendra donc une gestion des rendez-vous de chaque interven
 = Utilisation =
 
   # Ouvrir un invite de commande et se placer dans le dossier contenant la librairie en utilisant la fonction cd.
-  * Exemple H:/ISI1/GL02/Projet      
+    * Exemple H:/ISI1/GL02/Projet      
   # Taper la commande node _nom_du_script.js_ 
-  * Normalement le menu de l'application s'affiche, si ce n'est pas le cas reprenez au point 1.
-  * Le menu est donc affiché, choisissez la fonction que vous voulez utiliser.
+    * Normalement le menu de l'application s'affiche, si ce n'est pas le cas reprenez au point 1.
+    * Le menu est donc affiché, choisissez la fonction que vous voulez utiliser.
 
 = Organisation du projet =
 
