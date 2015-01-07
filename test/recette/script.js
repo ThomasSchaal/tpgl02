@@ -188,8 +188,9 @@ function importVcard() { // Fonction qui gere la SPEC_1
                            }
                            else {
                                var lignedebut = "Historique des modifications\n";
-                               fs.writeFile("modification.txt", lignedebut + modif);
-                               
+                               //REFACTORING
+								MESSAGE_LOG(lignedebut+modif);
+								//FIN REFACTORING
                                menu();
                            }
                        });
@@ -231,9 +232,15 @@ function csvGetLine(nom, prenom) { // Fonction qui permet de rechercher un conta
             for (k = 0; k < 8; k++) {
                 console.log(tabUtilisateur[0][k] + " : " + tabUtilisateur[numPersonne][k] + ' ');
             }
+			//REFACTORING
+			MESSAGE_LOG("Une recherche de contact sur la personne de "+nom+" "+prenom+" a ete effectue");
+			//FIN REFACTORING
             menu();
         } else { // Affichage s'il n'existe pas
             console.log("\nLe client n'existe pas");
+			//REFACTORING
+			MESSAGE_LOG("Une recherche de contact sur la personne de "+nom+" "+prenom+" mais il n'existait pas dans la base");
+			//FIN REFACTORING
             menu();
         }
 
@@ -341,6 +348,9 @@ function modifierContact(nom, prenom) {
             });
         } else { //Le contact n'existe pas, fin de la fonction.
             console.log("Le client n'existe pas");
+			//REFACTORING
+			MESSAGE_LOG("Tentative de modification d'un contact inexistant");
+			//FIN REFACTORING
             menu();
         }
     });
@@ -415,12 +425,7 @@ function supprimerContact(nom, prenom) { // Fonction qui permet de supprimer un 
                 var date = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
                 var modif = "suppression de : " + nom + ' ' + prenom + " le " + date + "\n";
                 if (exists) {
-                    fs.readFile("modification.txt", function(err, data) {
-                        if (err)
-                            throw err;
-                        fs.writeFile("modification.txt", data + modif);
-                        menu();
-                    });
+                    MESSAGE_LOG(modif);
                 }
                 else {
                     var lignedebut = "Historique des modifications\n";
@@ -430,6 +435,9 @@ function supprimerContact(nom, prenom) { // Fonction qui permet de supprimer un 
             });
         } else { // Si le client n'existe pas on ne supprime rien
             console.log("Le client n'existe pas. Suppression impossible.\n");
+			//REFACTORING
+			MESSAGE_LOG("Un contact a tente d'etre supprime mais il n'existait pas");
+			//FIN REFACTORING
             menu();
         }
 
@@ -470,6 +478,9 @@ function creerContact() {// Fonction qui permet de creer un contact. Une partie 
                                         }
                                         if (compteur === 1) { // Le contact existe deja. On ecrit pas le contact dans le CSV (eviter les doublons SPEC_4)
                                             console.log('Ajout impossible car le contact existe deja dans le fichier.');
+											//REFACTORING
+											MESSAGE_LOG("Un contact a tente d'être insere mais il existait deja");
+											//FIN REFACTORING
                                             menu();
                                         } else { // on ecrit les caracteristiques du contact dans le CSV
                                             fs.readFile('contacts.csv', function(err, data) {
@@ -480,13 +491,10 @@ function creerContact() {// Fonction qui permet de creer un contact. Une partie 
                                                     var date = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
                                                     var modif = "creation de : " + nom + ' ' + prenom + " le " + date + "\n";
                                                     if (exists) { // On rajoute une ligne pour repondre a la SPEC_9 dans le fichier modification.txt
-                                                        fs.readFile("modification.txt", function(err, data) {
-                                                            if (err)
-                                                                throw err;
-                                                            fs.writeFile("modification.txt", data + modif);
-                                                            menu();
-                                                        });
-                                                    }
+                                                        //REFACTORING
+														MESSAGE_LOG(modif);
+														//FIN REFACTORING
+													}
                                                     else {
                                                         var lignedebut = "Historique des modifications\n";
                                                         fs.writeFile("modification.txt", lignedebut + modif);
@@ -787,6 +795,9 @@ function transfertFicheArchivee(nom, prenom) {
             }
         } else { //Le client n'existe pas, fin de la fonction.
             console.log("Le client n'existe pas");
+			//REFACTORING
+			MESSAGE_LOG("Archivage erreur");
+			//FIN REFACTORING
             menu();
         }
     });
@@ -814,8 +825,39 @@ function REFACTORING_NOM_INSENSIBLE_A_LA_CASSE(nom){
 }
 
 function REFACTORING_PRENOM_INSENSIBLE_A_LA_CASSE(prenom){
+
   prenom = prenom.toLowerCase();
   prenom = prenom.charAt(0).toUpperCase() + prenom.slice(1);
   return prenom;
+}
+
+function MESSAGE_LOG(message){
+ fs.readFile("modification.txt", function(err, data) {
+                        if (err)
+                            throw err;
+                        fs.writeFile("modification.txt", getDate()+" : "+message);
+                        menu();
+                    });
+                }
+
+function getDate(){
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+var yyyy = today.getFullYear();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+
+if(dd<10) {
+    dd='0'+dd
+} 
+
+if(mm<10) {
+    mm='0'+mm
+} 
+
+today = mm+'/'+dd+'/'+yyyy+'-'+h+':'+m+':'+s;
+return today;
 }
 // FIN REFACTORING
