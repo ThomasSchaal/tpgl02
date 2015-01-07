@@ -2,15 +2,17 @@ var util = require("util");
 var fs = require("fs");
 
 // Creation d?un fichier contact.csv si il n?existe pas deja
-fs.exists("contacts.csv", function(exists) {                         
-   if (exists) {
-      menu();
-   } else {
-     var lignedebut = 'nom;prenom;organisation;fonction;adresse;mobile;fix;email\n';
-     fs.writeFile("contacts.csv", lignedebut);
-     menu();
-  }
-});
+fs.exists("contacts.csv", function(exists) {
+                           
+                           if (exists) {
+                               menu();
+                           }
+                           else {
+                               var lignedebut = 'nom;prenom;organisation;fonction;adresse;mobile;fix;email\n';
+                               fs.writeFile("contacts.csv", lignedebut);
+                               menu();
+                           }
+                       });
 
 
 //Fonction principale de notre application, elle permet d'appeller chaque fonction.
@@ -85,19 +87,19 @@ function menu() {
 
 //Ask permet de recuperer les entrees du clavier afin que l'utilisateur puisse definir ce qu'il veut.
 function ask(question, format, callback) {
-  var stdin = process.stdin; //Permet l'entree du clavier.
-  var stdout = process.stdout; //Permet l'affichage de la sortie.
-  stdin.resume(); //Permet de reprendre la main sur la console.
-  stdout.write(question + ": "); //Affiche la question dans la console.
-  stdin.once('data', function(data) { //Recupere l'entree clavier sous forme de "data".
-      data = data.toString().trim();
-      if (format.test(data)) { //Si l'entree du clavier correspond au format...
-        callback(data); //...On retourne l'entree.
-      } else { //Sinon...
-        stdout.write("Format incorrect, celui ci doit etre sous la forme: " + format + "\n"); //...affichage d'un message d'erreur.
-        ask(question, format, callback); //La question est reposee.
-    }
-  });
+    var stdin = process.stdin; //Permet l'entree du clavier.
+    var stdout = process.stdout; //Permet l'affichage de la sortie.
+    stdin.resume(); //Permet de reprendre la main sur la console.
+    stdout.write(question + ": "); //Affiche la question dans la console.
+    stdin.once('data', function(data) { //Recupere l'entree clavier sous forme de "data".
+        data = data.toString().trim();
+        if (format.test(data)) { //Si l'entree du clavier correspond au format...
+            callback(data); //...On retourne l'entree.
+        } else { //Sinon...
+            stdout.write("Format incorrect, celui ci doit etre sous la forme: " + format + "\n"); //...affichage d'un message d'erreur.
+            ask(question, format, callback); //La question est reposee.
+        }
+    });
 }
 
 
