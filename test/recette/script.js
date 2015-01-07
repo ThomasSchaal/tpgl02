@@ -451,10 +451,10 @@ function creerContact() {// Fonction qui permet de creer un contact. Une partie 
         ask("choisissez votre prenom", /\b[A-Z][a-z]+/, function(prenom) {
             ask("choisissez votre organisation", /^[a-zA-Z0-9]+$/, function(org) {
                 ask("choisissez votre fonction", /^[a-zA-Z]+$/, function(fonction) {
-                    ask("choisissez votre adresse", /^[a-zA-Z0-9\ ]+$/, function(adresse) {
-                        ask("choisissez votre mobile", /^[0-9\ ]+$/, function(mobile) {
-                            ask("choisissez votre fixe", /^[0-9\ ]+$/, function(fixe) {
-                                ask("choisissez votre email", /^(.+)@/, function(email) { // on met toutes les caracteristiques dans une variable personne
+                    ask("choisissez votre adresse", /^[0-9]{1,3}( rue )[a-zA-Z\ ]+$/, function(adresse) {
+                        ask("choisissez votre mobile", /^0[6-7][0-9]{8}$/, function(mobile) {
+                            ask("choisissez votre fixe", /^0[1-9][0-9]{8}$/, function(fixe) {
+                                ask("choisissez votre email", /^(.+)@(.+)\.[a-z]{2}$/, function(email) { // on met toutes les caracteristiques dans une variable personne
                                     personne = (nom + ";" + prenom + ";" + org + ";" + fonction + ";" + adresse + ";" + mobile + ";" + fixe + ";" + email);
                                     var compteur = 0;
                                     fs.readFile('contacts.csv', function(err, data) { // On lit le CSV pour ensuite mettre toutes les valeurs du fichier dans un tableau a deux dimensions
@@ -858,7 +858,7 @@ function MESSAGE_LOG(message){
  fs.readFile("modification.txt", function(err, data) {
                         if (err)
                             throw err;
-                        fs.writeFile("modification.txt", getDate()+" : "+message);
+                        fs.writeFile("modification.txt", getDate()+" : "+message+"\n");
                         menu();
                     });
                 }
