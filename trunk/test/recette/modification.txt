@@ -1,7 +1,1 @@
-Historique des modifications
-archivage de : AVARGUES Guillaume le 2014-12-30 00:07:08
-modification de : TAKE Mis le 2014-12-30 00:19:42
-creation de : Ha Kevin le 2014-12-30 00:20:57
-suppression de : Ha Kevin le 2014-12-30 00:21:26
-import de : AVARGUES Guillaume le 2014-12-30 00:24:57
-suppression de : TEST Test le 2015-01-07 13:28:12
+01/07/2015-15:36:11 : Un contact a tente d'�tre supprime mais il n'existait pas
