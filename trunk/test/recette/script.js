@@ -201,7 +201,8 @@ function importVcard() { // Fonction qui gere la SPEC_1
 }
 
 function csvGetLine(nom, prenom) { // Fonction qui permet de rechercher un contact et d'afficher la fiche de ce contact SPEC_7 et SPEC_8
-	REFACTORING_NOM_PRENOM_INSENSIBLE_A_LA_CASSE();
+	  nom = REFACTORING_NOM_INSENSIBLE_A_LA_CASSE(nom);
+    prenom = REFACTORING_PRENOM_INSENSIBLE_A_LA_CASSE(prenom);
     console.log('\nVous avez selectionne : ' + nom + ' ' + prenom);
     var compteur = 0;
     var numPersonne = 0;
@@ -242,7 +243,8 @@ function csvGetLine(nom, prenom) { // Fonction qui permet de rechercher un conta
 }
 
 function modifierContact(nom, prenom) {
-REFACTORING_NOM_PRENOM_INSENSIBLE_A_LA_CASSE();
+  nom = REFACTORING_NOM_INSENSIBLE_A_LA_CASSE(nom);
+  prenom = REFACTORING_PRENOM_INSENSIBLE_A_LA_CASSE(prenom);
     var compteur = 0; //booleen qui permet de savoir si le contact existe ou non, 0 : non, 1 : oui
     var numPersonne = 0; //id de la personne recherchee.
     fs.readFile('contacts.csv', function(err, data) { //Ouverture du fichier contact et recuperation des donnees.
@@ -345,7 +347,8 @@ REFACTORING_NOM_PRENOM_INSENSIBLE_A_LA_CASSE();
 }
 
 function supprimerContact(nom, prenom) { // Fonction qui permet de supprimer un contact dans le CSV general. Une partie de la SPEC_2
-	REFACTORING_NOM_PRENOM_INSENSIBLE_A_LA_CASSE();
+	nom = REFACTORING_NOM_INSENSIBLE_A_LA_CASSE(nom);
+  prenom = REFACTORING_PRENOM_INSENSIBLE_A_LA_CASSE(prenom);
    console.log('Vous avez selectionne : ' + nom + ' ' + prenom);
     var compteur = 0;
     var numPersonne = 0;
@@ -508,7 +511,8 @@ function creerContact() {// Fonction qui permet de creer un contact. Une partie 
 }
 
 function archiverContact(nom, prenom) {
-    REFACTORING_NOM_PRENOM_INSENSIBLE_A_LA_CASSE();
+  nom = REFACTORING_NOM_INSENSIBLE_A_LA_CASSE(nom);
+  prenom = REFACTORING_PRENOM_INSENSIBLE_A_LA_CASSE(prenom);
 	var compteur = 0; //booleen qui permet de savoir si le contact existe ou non, 0 : non, 1 : oui
     var numPersonne = 0; //id de la personne recherchee.
     fs.readFile('contacts.csv', function(err, data) { //Ouverture du fichier contact et recuperation des donnees.
@@ -660,7 +664,8 @@ function choixFicheArchivee() { // Fonction qui permet d'afficher le CSV et de s
 }
 
 function transfertFicheArchivee(nom, prenom) {
-    REFACTORING_NOM_PRENOM_INSENSIBLE_A_LA_CASSE();
+  nom = REFACTORING_NOM_INSENSIBLE_A_LA_CASSE(nom);
+  prenom = REFACTORING_PRENOM_INSENSIBLE_A_LA_CASSE(prenom);
 	var compteur = 0; //booleen qui permet de savoir si le contact existe ou non, 0 : non, 1 : oui
     var numPersonne = 0; //id de la personne recherchee.
     fs.readFile('archive.csv', function(err, data) { //Ouverture du fichier contact et recuperation des donnees.
@@ -803,9 +808,14 @@ function compterNombreLigne() { //Affichage des statistiques de l'application SP
 }
 
 //DEBUT FONCTION REFACTORING
-function REFACTORING_NOM_PRENOM_INSENSIBLE_A_LA_CASSE(){
- // REFACTORING 
+function REFACTORING_NOM_INSENSIBLE_A_LA_CASSE(nom){
   nom = nom.toUpperCase();
-  prenom = prenom.charAt(0).toUpperCase() + prenom.slice(1);
-  // FIN REFACTORING
+  return nom;  
 }
+
+function REFACTORING_PRENOM_INSENSIBLE_A_LA_CASSE(prenom){
+  prenom = prenom.toLowerCase();
+  prenom = prenom.charAt(0).toUpperCase() + prenom.slice(1);
+  return prenom;
+}
+// FIN REFACTORING
