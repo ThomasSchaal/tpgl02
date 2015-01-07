@@ -55,8 +55,7 @@ function menu() {
             case '3' : //Exporter les contacts dans un format adequat aux logiciels de bureautiques
                 ask("Choisisser le chemin du fichier csv ", /.*/, function(chemin) {
                     fs.readFile('contacts.csv', function(err, data) {
-                        fs.writeFile(chemin, data);
-                        menu();
+                        exporterContact(chemin,data);
                     });
                 });
                 break;
@@ -597,6 +596,7 @@ function archiverContact(nom, prenom) {
                         fs.readFile("archive.csv", function(err, data) { //Lecture du fichier archive.csv
                             if (err)
                                 throw err;
+                            
                             fs.writeFile("archive.csv", data + personne); //Ecriture de la personne dans le fichier archive.csv
                             console.log(personne + " ajoute a l'archive");
                             fs.exists("modification.txt", function(exists) { //Enregistrement des modifications.
@@ -829,6 +829,29 @@ function REFACTORING_PRENOM_INSENSIBLE_A_LA_CASSE(prenom){
   prenom = prenom.toLowerCase();
   prenom = prenom.charAt(0).toUpperCase() + prenom.slice(1);
   return prenom;
+}
+
+function exporterContact(chemin,data){
+  fs.writeFile(chemin, data);
+  console.log("Export des contacts effectue !");
+  fs.exists("modification.txt", function(exists) { //Enregisteement des modifications.
+    var date = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
+    var modif = "export des contacts le : " + date + "\n";
+    if (exists) {
+        fs.readFile("modification.txt", function(err, data) {
+            if (err)
+                throw err;
+            fs.writeFile("modification.txt", data + modif);
+            menu();
+        });
+    }
+    else {
+        var lignedebut = "Historique des modifications\n";
+        fs.writeFile("modification.txt", lignedebut + modif);
+        menu();
+    }
+
+  });
 }
 
 function MESSAGE_LOG(message){
