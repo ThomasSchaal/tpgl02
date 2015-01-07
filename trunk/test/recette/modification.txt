@@ -1,1 +1,1 @@
-01/07/2015-15:36:11 : Un contact a tente d'�tre supprime mais il n'existait pas
+01/07/2015-15:42:3 : Tentative de modification d'un contact inexistantexport des contacts le : 2015-01-07 14:50:18
