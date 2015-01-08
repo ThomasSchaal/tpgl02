@@ -1,6 +1,9 @@
 var util = require("util");
 var fs = require("fs");
+var qunit=require("qunit");
 
+var entrerInformation=;
+var fichierLecture;
 // Creation d?un fichier contact.csv si il n?existe pas deja
 fs.exists("contacts.csv", function(exists) {
                            
@@ -448,7 +451,7 @@ function creerContact() {// Fonction qui permet de creer un contact. Une partie 
 
     var personne = null; // On demande a l'utilisateur chaque caracteristiques du contact qu'il veut enregistrer
     ask("\nchoisissez le nom", /[A-Z]+/, function(nom) {
-        ask("choisissez votre prenom", /\b[A-Z][a-z]+/, function(prenom) {
+        ask("choisissez votre prenom", /[A-Za-z]+/, function(prenom) {
             ask("choisissez votre organisation", /^[a-zA-Z0-9]+$/, function(org) {
                 ask("choisissez votre fonction", /^[a-zA-Z]+$/, function(fonction) {
                     ask("choisissez votre adresse", /^[0-9]{1,3}( rue )[a-zA-Z\ ]+$/, function(adresse) {
@@ -457,6 +460,7 @@ function creerContact() {// Fonction qui permet de creer un contact. Une partie 
                                 ask("choisissez votre email", /^(.+)@(.+)\.[a-z]{2}$/, function(email) { // on met toutes les caracteristiques dans une variable personne
                                     personne = (nom + ";" + prenom + ";" + org + ";" + fonction + ";" + adresse + ";" + mobile + ";" + fixe + ";" + email);
                                     var compteur = 0;
+                                    entrerInformation="ok";//TEST QUNIT
                                     fs.readFile('contacts.csv', function(err, data) { // On lit le CSV pour ensuite mettre toutes les valeurs du fichier dans un tableau a deux dimensions
                                         if (err)
                                             throw err;
@@ -470,6 +474,7 @@ function creerContact() {// Fonction qui permet de creer un contact. Une partie 
                                                 tabUtilisateur[j][k] = tabstock[k]; // On met les valeurs dans le tableau a deux dimensions
                                             }
                                         }
+                                        fichierLecture="ok";// TEST QUNIT
                                         for (j = 0; j < tab1.length - 1; j++) {
                                             if (tabUtilisateur[j][0] === nom && tabUtilisateur[j][1] === prenom) { // Test qui permet de voir si le client demande dans la recherche existe bien dans le CSV
                                                 compteur = compteur + 1;
@@ -491,9 +496,9 @@ function creerContact() {// Fonction qui permet de creer un contact. Une partie 
                                                     var modif = "creation de : " + nom + ' ' + prenom + " le " + date + "\n";
                                                     if (exists) { // On rajoute une ligne pour repondre a la SPEC_9 dans le fichier modification.txt
                                                         //REFACTORING
-														MESSAGE_LOG(modif);
-														//FIN REFACTORING
-													}
+                          														MESSAGE_LOG(modif);
+                          														//FIN REFACTORING
+                          													}
                                                     else {
                                                         var lignedebut = "Historique des modifications\n";
                                                         fs.writeFile("modification.txt", lignedebut + modif);
@@ -515,6 +520,7 @@ function creerContact() {// Fonction qui permet de creer un contact. Une partie 
 
 
     });
+
 }
 
 function archiverContact(nom, prenom) {
@@ -861,26 +867,26 @@ function MESSAGE_LOG(message){
                         fs.writeFile("modification.txt", getDate()+" : "+message+"\n");
                         menu();
                     });
-                }
+}
 
 function getDate(){
-var today = new Date();
-var dd = today.getDate();
-var mm = today.getMonth()+1; //January is 0!
-var yyyy = today.getFullYear();
-var h=today.getHours();
-var m=today.getMinutes();
-var s=today.getSeconds();
+  var today = new Date();
+  var dd = today.getDate();
+  var mm = today.getMonth()+1; //January is 0!
+  var yyyy = today.getFullYear();
+  var h=today.getHours();
+  var m=today.getMinutes();
+  var s=today.getSeconds();
 
-if(dd<10) {
-    dd='0'+dd
-} 
+  if(dd<10) {
+      dd='0'+dd
+  } 
 
-if(mm<10) {
-    mm='0'+mm
-} 
+  if(mm<10) {
+      mm='0'+mm
+  } 
 
-today = mm+'/'+dd+'/'+yyyy+'-'+h+':'+m+':'+s;
-return today;
+  today = mm+'/'+dd+'/'+yyyy+'-'+h+':'+m+':'+s;
+  return today;
 }
 // FIN REFACTORING
