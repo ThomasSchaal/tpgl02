@@ -19,31 +19,31 @@ Notre application comprendra donc une gestion des rendez-vous de chaque interven
     * Le menu de l'application s'affiche, si ce n'est pas le cas reprenez au point 1.
     * Le menu est donc affiché, choisissez la fonction que vous voulez utiliser.
 
-=== 1. Importer la liste des contacts au format vCard === 
+    === 1. Importer la liste des contacts au format vCard === 
 
 Le but de cette fonctionnalité est de convertir des fiches de contacts (.vcf) dans un format vCard et stocker ces fiches de contacts dans une base centralisée dans un fichier contact.csv
 
-=== 2. Créer, modifier ou supprimer un ficher de contact ===
+    === 2. Créer, modifier ou supprimer un ficher de contact ===
 
 Cette option permet à l'utilisateur de d'interagir avec la base de contacts du programme, il peut ajouter, éditer ou supprimer un contact de la base. 
 
-=== 3. Exporter les contacts dans un format adéquat aux logiciels de bureautiques ===
+    === 3. Exporter les contacts dans un format adéquat aux logiciels de bureautiques ===
 
 L'objectif est de permettre aux logiciels bureautiques (de type Excel par exemple) d'exploiter les fiches de contacts issues du logiciel. Ces fiches vCard sont convertis ainsi au format CSV.
 
-=== 4. Archiver une fiche contact ===
+    === 4. Archiver une fiche contact ===
 
 Cette option permet à l'utilisateur d'archiver une fiche de contact présente dans la base de données du logiciel vers un fichier archive.csv
 
-=== 5. Transférer une fiche archivée ===
+    === 5. Transférer une fiche archivée ===
 
 Cette fonctionnalité transfère une fiche archivée vers la base de données des contacts du logiciel. 
 
-=== 6. Rechercher et afficher un contact ===
+    === 6. Rechercher et afficher un contact ===
 
 Cette fonctionnalité affiche les informations d'un contact recherché par l'utilisateur.
 
-=== 7. Afficher de statistiques générales ===
+    === 7. Afficher de statistiques générales ===
 
 Le but est d'afficher quelques statistiques sur la base de données des fiches de contacts tels que le nombre de contacts par exemple. 
 
