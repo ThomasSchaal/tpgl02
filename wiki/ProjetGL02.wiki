@@ -19,13 +19,13 @@ Notre application comprendra donc une gestion des rendez-vous de chaque interven
     * Le menu de l'application s'affiche, si ce n'est pas le cas reprenez au point 1.
     * Le menu est donc affiché, choisissez la fonction que vous voulez utiliser.
 
-=== # Importer la liste des contacts au format vCard ===
-=== # Créer, modifier ou supprimer un ficher de contact ===
-=== # Exporter les contacts dans un format adéquat aux logiciels de bureautiques ===
-=== # Archiver une fiche contact ===
-=== # Transférer une fiche archivée ===
-=== # Rechercher et afficher un contact ===
-=== # Afficher de statistiques générales ===
+=== 1. Importer la liste des contacts au format vCard ===
+=== 2. Créer, modifier ou supprimer un ficher de contact ===
+=== 3. Exporter les contacts dans un format adéquat aux logiciels de bureautiques ===
+=== 4. Archiver une fiche contact ===
+=== 5. Transférer une fiche archivée ===
+=== 6. Rechercher et afficher un contact ===
+=== 7. Afficher de statistiques générales ===
 
 = Organisation du projet =
 
