@@ -1,0 +1,29 @@
+nom;prenom;organisation;fonction;adresse;mobile;fix;email
+PETIT;Mathis;UTT;Enseignant;62 chemin du vignal 10003 Troyes;06 01 01 01 03;04 93 01 01 04;petit.mathis@utt.fr
+ROBERT;Louise;UTT;Enseignant;75 chemin du vignal 10004 Troyes;06 01 01 01 04;04 93 01 01 05;robert.louise@utt.fr
+RICHARD;Hugo;UTT;Etudiant;59 chemin du vignal 10005 Troyes;06 01 01 01 05;04 93 01 01 06;richard.hugo@utt.fr
+DURAND;Maxime;UTT;Etudiant;78 chemin du vignal 10006 Troyes;06 01 01 01 06;04 93 01 01 07;durand.maxime@utt.fr
+DUBOIS;Jules;UTT;Etudiant;42 chemin du chautard 10007 Troyes;06 01 01 01 07;04 93 01 01 08;dubois.jules@utt.fr
+MOREAU;Thomas;UTC;Etudiant;56 chemin du chautard 60200 Compiègne;06 01 01 01 08;04 93 01 01 09;moreau.thomas@utt.fr
+LAURENT;Torn;UTC;Etudiant;72 chemin du chautard  60201 Compiègne;06 01 01 01 09;04 93 01 01 10;laurent.torn@utt.fr
+SIMON;Raphael;UTC;Etudiant;86 chemin du chautard 60202 Compiègne;06 01 01 01 10;04 93 01 01 11;simon.raphael@utt.fr
+MICHEL;Gabriel;UTC;Etudiant;106 chemin du chautard 60203 Compiègne;06 01 01 01 11;04 93 01 01 12;michel.gabriel@utt.fr
+LEFEBVRE;Matheo;UTC;Etudiant;100 chemin du chautard 60204 Compiègne;06 01 01 01 12;04 93 01 01 13;lefebvre.matheo@utt.fr
+LEROY;Theo;UTC;Etudiant;1 chemin du val fleuri 60205 Compiègne;06 01 01 01 13;04 93 01 01 14;leroy.theo@utt.fr
+ROUX;Noa;UTC;Etudiant;45 chemin du val fleuri 60206 Compiègne;06 01 01 01 14;04 93 01 01 15;roux.noa@utt.fr
+DAVID;Ethan;UTC;Etudiant;56 chemin du val fleuri 60207 Compiègne;06 01 01 01 15;04 93 01 01 16;david.ethan@utt.fr
+BERTRAND;Clement;UTC;Enseignant;11 chemin du val fleuri 60208 Compiègne;06 01 01 01 16;04 93 01 01 17;bertrand.clement@utt.fr
+MOREL;Yanis;UTC;Enseignant;96 chemin du val fleuri 60209 Compiègne;06 01 01 01 17;04 93 01 01 18;morel.yanis@utt.fr
+FOURNIER;Arthur;UTC;Directeur;10 chemin du val fleuri 60210 Compiègne;06 01 01 01 18;04 93 01 01 19;fournier.arthur@utt.fr
+GIRARD;Leo;UTBM;Directeur;61 chemin du val fleuri 90000 Belfort;06 01 01 01 19;04 93 01 01 20;girard.leo@utt.fr
+BONNET;Paul;UTBM;Enseignant;71 chemin du val fleuri 90000 Belfort;06 01 01 01 20;04 93 01 01 21;bonnet.paul@utt.fr
+DUPONT;Antoine;UTBM;Enseignant;1 avenue anatole France 90000 Belfort;06 01 01 01 21;04 93 01 01 22;dupont.antoine@utt.fr
+LAMBERT;Evan;UTBM;Enseignant;11 avenue anatole France 90000 Belfort;06 01 01 01 22;04 93 01 01 23;lambert.evan@utt.fr
+FONTAINE;Adam;UTBM;Enseignant;21 avenue anatole France 90000 Belfort;06 01 01 01 23;04 93 01 01 24;fontaine.adam@utt.fr
+ROUSSEAU;Baptiste;UTBM;Enseignant;31 avenue anatole France 90000 Belfort;06 01 01 01 24;04 93 01 01 25;rousseau.baptiste@utt.fr
+VINCENT;Alexandre;UTBM;Etudiant;41 avenue anatole France 90000 Belfort;06 01 01 01 25;04 93 01 01 26;vincent.alexandre@utt.fr
+MULLER;Herve;UTBM;Etudiant;51 avenue anatole France 90000 Belfort;06 01 01 01 26;04 93 01 01 27;muller.herve@utt.fr
+LEFEVRE;Quentin;UTBM;Etudiant;61 avenue anatole France 90000 Belfort;06 01 01 01 27;04 93 01 01 28;lefevre.quentin@utt.fr
+FAURE;Noa;UTBM;Etudiant;71 avenue anatole France 90000 Belfort;06 01 01 01 28;04 93 01 01 29;faure.noa@utt.fr
+ANDRE;Oumar;UTBM;Etudiant;81 avenue anatole France 90000 Belfort;06 01 01 01 29;04 93 01 01 30;andre.oumar@utt.fr
+SPÉCIAL;Caractère;UTT;Informatique et systèmes d'information;26 chemin de chautard 10000 Troyes;0602020202;0452542120;caractère.spécial@gmail.com
