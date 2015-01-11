@@ -2,8 +2,10 @@ var util = require("util");
 var fs = require("fs");
 var qunit=require("qunit");
 
-var entrerInformation=;
-var fichierLecture;
+//QUNIT VARIABLE DE TEST
+var entrerInformation=null;
+var fichierLecture=null;
+var suppression=null;
 // Creation d?un fichier contact.csv si il n?existe pas deja
 fs.exists("contacts.csv", function(exists) {
                            
@@ -356,7 +358,7 @@ function modifierContact(nom, prenom) {
             menu();
         }
     });
-}
+  }
 
 function supprimerContact(nom, prenom) { // Fonction qui permet de supprimer un contact dans le CSV general. Une partie de la SPEC_2
 	nom = REFACTORING_NOM_INSENSIBLE_A_LA_CASSE(nom);
@@ -423,6 +425,7 @@ function supprimerContact(nom, prenom) { // Fonction qui permet de supprimer un 
              fs.writeFile("contacts.csv", begin + end); // On ecrit dans le CSV les clients sauf celui qui vient d'etre supprime
         }
             console.log("La suppression a reussie.\n");
+            suppression=ok;
             fs.exists("modification.txt", function(exists) { // On rajoute une ligne pour repondre a la SPEC_9 dans le fichier modification.txt
                 var date = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
                 var modif = "suppression de : " + nom + ' ' + prenom + " le " + date + "\n";
@@ -444,7 +447,7 @@ function supprimerContact(nom, prenom) { // Fonction qui permet de supprimer un 
         }
 
     });
-}
+  }
 
 function creerContact() {// Fonction qui permet de creer un contact. Une partie de la SPEC_2
     // demander informations, creer personne, coordonee puis contact, ouvrir csv et ecrire csv+nouveauContact
@@ -659,7 +662,7 @@ function archiverContact(nom, prenom) {
         }
     });
 
-}
+  }
 
 function choixFicheArchivee() { // Fonction qui permet d'afficher le CSV et de selectionner quel client on veut transferer
     fs.readFile('archive.csv', function(err, data) {
@@ -673,8 +676,6 @@ function choixFicheArchivee() { // Fonction qui permet d'afficher le CSV et de s
             });
         });
     });
-
-
 }
 
 function transfertFicheArchivee(nom, prenom) {
@@ -807,7 +808,7 @@ function transfertFicheArchivee(nom, prenom) {
             menu();
         }
     });
-}
+  }
 
 function compterNombreLigne() { //Affichage des statistiques de l'application SPEC_10
     var compteur = 0;
@@ -828,14 +829,14 @@ function compterNombreLigne() { //Affichage des statistiques de l'application SP
 function REFACTORING_NOM_INSENSIBLE_A_LA_CASSE(nom){
   nom = nom.toUpperCase();
   return nom;  
-}
+  }
 
 function REFACTORING_PRENOM_INSENSIBLE_A_LA_CASSE(prenom){
 
   prenom = prenom.toLowerCase();
   prenom = prenom.charAt(0).toUpperCase() + prenom.slice(1);
   return prenom;
-}
+  }
 
 function exporterContact(chemin,data){
   fs.writeFile(chemin, data);
@@ -858,7 +859,7 @@ function exporterContact(chemin,data){
     }
 
   });
-}
+  }
 
 function MESSAGE_LOG(message){
  fs.readFile("modification.txt", function(err, data) {
@@ -867,7 +868,7 @@ function MESSAGE_LOG(message){
                         fs.writeFile("modification.txt", getDate()+" : "+message+"\n");
                         menu();
                     });
-}
+  }
 
 function getDate(){
   var today = new Date();
@@ -888,5 +889,5 @@ function getDate(){
 
   today = mm+'/'+dd+'/'+yyyy+'-'+h+':'+m+':'+s;
   return today;
-}
+  }
 // FIN REFACTORING

@@ -15,6 +15,8 @@ QUnit.test("Modifier une fiche de contact", function(assert){
 QUnit.test("Supprimer une fiche de contact", function(assert){
 
   // Pas encore fait...
+  supprimer("PETIT","Mathis");
+  assert.equal(suppression, "ok");
   
 });
 QUnit.test("Archiver une fiche de contact", function(assert){
